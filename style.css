@@ -90,6 +90,7 @@ body {
     text-align: center;
     transition: transform 0.3s;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
 }
 
 .product-card:hover {
