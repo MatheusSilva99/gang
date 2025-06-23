@@ -20,7 +20,7 @@ body {
     border-bottom: 1px solid #e0e0e0;
     max-width: 1200px;
     margin: 0 auto 20px auto;
-    flex-wrap: wrap; /* mantém horizontal mas permite quebra no mobile */
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -81,6 +81,13 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+}
+
+/* Aumentar o espaço entre as fileiras de cards no DESKTOP */
+@media (min-width: 1025px) {
+    .products {
+        row-gap: 200px; /* maior espaço entre fileiras */
+    }
 }
 
 .product-card {
@@ -249,7 +256,7 @@ body {
     border-color: #111111;
 }
 
-/* Responsive */
+/* Responsive ajustes */
 @media (max-width: 1024px) {
     .products {
         grid-template-columns: repeat(3, 1fr);
@@ -269,12 +276,14 @@ body {
 }
 
 @media (max-width: 600px) {
-    .logo {
-        font-size: 20px;
+    .banner {
+        height: 30vh; /* altura menor para banner no celular */
+        background-position: center center; /* centraliza a imagem */
+        background-size: contain; /* ajusta a imagem para caber toda */
     }
 
-    .banner {
-        height: 35vh;
+    .logo {
+        font-size: 20px;
     }
 
     .product-card img {
